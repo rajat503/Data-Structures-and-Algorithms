@@ -8,6 +8,3 @@ def INSERTION_SORT(A):
             j -= 1
         A[j+1] = x
     return A
-
-A = INSERTION_SORT(map(int, raw_input().split()))
-print A

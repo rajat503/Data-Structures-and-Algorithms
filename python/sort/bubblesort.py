@@ -5,6 +5,3 @@ def BUBBLE_SORT(A):
             if A[j] < A[j-1]:
                 A[j], A[j-1] = A[j-1], A[j]
     return A
-
-A = BUBBLE_SORT(map(int, raw_input().split()))
-print A
