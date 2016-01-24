@@ -29,7 +29,3 @@ def QUICKSORT(A):
     ARR = A
     QS(0, len(A))
     return ARR
-
-A = map(int, raw_input().split())
-A = QUICKSORT(A)
-print A

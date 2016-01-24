@@ -26,6 +26,3 @@ def MERGE_SORT(A):
 		a = MERGE_SORT(A[0:n/2])
 		b = MERGE_SORT(A[n/2:])
 	return MERGE(a, b)
-
-array = [-1,9,8,7,6, 100002 ,5,4,3,2,1, 10000, -2, 101]
-print MERGE_SORT(array)

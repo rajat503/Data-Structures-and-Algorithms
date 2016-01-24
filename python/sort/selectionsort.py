@@ -7,6 +7,3 @@ def SELECTION_SORT(A):
                 minIndex = j
         A[i], A[minIndex] = A[minIndex], A[i]
     return A
-
-A = SELECTION_SORT(map(int, raw_input().split()))
-print A
