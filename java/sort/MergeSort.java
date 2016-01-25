@@ -1,7 +1,9 @@
 class MergeSort
 {
+  private static int helper[];
   public static void mergeSort(int a[])
   {
+    helper=new int[a.length];
     msort(a,0,a.length-1);
   }
   private static void msort(int a[], int l, int r)
@@ -15,8 +17,8 @@ class MergeSort
   }
   private static void merge(int a[], int l, int r)
   {
-    int i,lc=l,rc=((r+l)/2)+1,hc=l;
-    int helper[]=new int[a.length];
+    int i,lc=l,rc=((r+l)/2)+1 ,hc=l;
+
     for(i=l;i<=r;i++)
     {
       helper[i]=a[i];
