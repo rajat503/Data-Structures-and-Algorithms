@@ -1,9 +1,7 @@
 class QuickSort
 {
-  private static int helper[];
   public static void quickSort(int a[])
   {
-    helper=new int[a.length];
     qsort(a,0,a.length-1);
   }
   private static void qsort(int a[], int l, int r)
@@ -17,25 +15,20 @@ class QuickSort
   }
   private static int partition(int a[], int l, int r)
   {
-    int i,j,k;
-    i=l;
-    j=r;
-    for(k=l+1;k<=r;k++)
+    int i=l-1,j,t;
+    for(j=l;k<r;k++)
     {
-      if(a[k]<a[l])
+      if(a[j]<a[r])
       {
-        helper[i++]=a[k];
-      }
-      if(a[k]>a[l])
-      {
-        helper[j--]=a[k];
+        i++;
+        t=a[i];
+        a[i]=a[j];
+        a[j]=t;
       }
     }
-    helper[j]=a[l];
-    for(k=l;k<=r;k++)
-    {
-      a[k]=helper[k];
-    }
-    return j;
+    t=a[i+1];
+    a[i+1]=a[r];
+    a[r]=t;
+    return i+1;
   }
 }
