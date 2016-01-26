@@ -16,7 +16,7 @@ class QuickSort
   private static int partition(int a[], int l, int r)
   {
     int i=l-1,j,t;
-    for(j=l;k<r;k++)
+    for(j=l;j<r;j++)
     {
       if(a[j]<a[r])
       {
